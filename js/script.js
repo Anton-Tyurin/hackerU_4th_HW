@@ -110,8 +110,11 @@ function handler() {
   } else if (NUMBERS_MENU.checked) {
     validateNumber();
   } else {
-
-    ARRAY_VALUES = "You must choose an option to continue";
+    if (LANG_STATE_ENG) {
+      ARRAY_VALUES = "You must choose an option to continue";
+    } else {
+      ARRAY_VALUES = 'Выберите опцию чтобы продолжить';
+    }
     renderResult()
   }
 }
